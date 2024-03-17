@@ -1,18 +1,8 @@
 import React from "react";
 import PropertyCard from "../PropertyCard/PropertyCard";
 import Link from "next/link";
-async function fetchProerties(){
-  try {
-    const res = await fetch(`${process.env.NEXT_PUPLIC_API_DOMAIN}/properties`)
-    if(!res.ok){
-      throw new Error('Faild to fetch data');
-    }
+import { fetchProerties } from "@/utils/requests";
 
-    return res.json();
-  } catch (error) {
-    console.log(error);
-  }
-}
 const HomeProperties =async () => {
   const properties=await fetchProerties();
   const recentProperties = properties
