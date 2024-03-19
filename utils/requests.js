@@ -1,4 +1,4 @@
-const apiDomain ='http://localhost:3000/api';// process.env.NEXT_PUPLIC_API_DOMAIN || null;
+const apiDomain = process.env.NEXT_PUPLIC_API_DOMAIN || null;
 
 //fetch properties
 async function fetchProerties() {
